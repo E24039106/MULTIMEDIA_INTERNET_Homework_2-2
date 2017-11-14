@@ -21,14 +21,15 @@ table, td {
 
 <script>
 function myFunction() {
+    var n = document.getElementById("num").value;
     var table = document.getElementById("myTable");
     var i;
     var j;
-        for (i = 0 ; i < 5 ; i++) {
+        for (i = 0 ; i < ((n-n%10)/10+1) ; i++) {
           var row = table.insertRow(i);
           for (j = 0 ; j < 10 ; j++) {
             var element = 10*i + j + 1;
-            if (element <= 100){
+            if (element <= n){
               var cell1 = row.insertCell(j);
               cell1.innerHTML = element;
             }
