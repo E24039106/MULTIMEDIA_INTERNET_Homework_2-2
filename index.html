@@ -8,15 +8,16 @@ table, td {
 </style>
 </head>
 <body>
-
-<p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
+    <form id="arraynumber" action="http://moeas.ee.ncku.edu.tw:8080/HW2/submitReply.aspx">
+      Please enter a number: <input type="text" id="num" value=""><br>
+      <input type="submit" value="Submit" onclick="myFunction()">
+    </form> 
 
 <table id="myTable">
 
 </table>
 <br>
 
-<button onclick="myFunction()">Try it</button>
 
 <script>
 function myFunction() {
