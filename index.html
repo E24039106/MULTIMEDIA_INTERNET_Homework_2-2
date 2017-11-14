@@ -22,6 +22,7 @@ table, td {
 <script>
 var i=0;
 var j;
+var rows;
 function myFunction() {
     var n = document.getElementById("num").value;
     var table = document.getElementById("myTable");
@@ -29,8 +30,9 @@ function myFunction() {
       table.deleteRow(0);
       i--;
     }
-
-        for (i = 0 ; i < ((n-n%10)/10+1) ; i++) {
+        if (n%10==0){rows=n/10}
+        else{rows=(n-n%10)/10+1}
+        for (i = 0 ; i < rows ; i++) {
           var row = table.insertRow(i);
           for (j = 0 ; j < 10 ; j++) {
             var element = 10*i + j + 1;
