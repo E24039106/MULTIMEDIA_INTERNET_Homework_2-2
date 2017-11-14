@@ -1,4 +1,4 @@
 function myFunction() {
-    var x = document.getElementById("num");
+    var x = document.getElementById("arraynumber");
     document.write(x);
 }
