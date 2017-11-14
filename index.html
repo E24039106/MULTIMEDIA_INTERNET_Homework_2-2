@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RRRWHATSHOULDIDO</title>
-    <style>
-    table, td {
-        border: 1px solid black;
-    }
-    </style>
-  </head>
-  <body>
-    <form id="arraynumber" action="http://moeas.ee.ncku.edu.tw:8080/HW2/submitReply.aspx">
-      Please enter a number: <input type="text" id="num" value=""><br>
-      <input type="submit" value="Submit" onclick="myFunction()">
+<head>
+<style>
+table, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
 
-    </form> 
-    <script>
-      function myFunction() {
-        var x = document.getElementById("num").value;
-        document.write(x);
-        // Define a 2-D array
-        var d1 = x;
-        var d2 = 10;
-        var array2d = new Array(d1);
-        for (i = 0 ; i < d2 ; i++) {
-          array2d[i] = new Array(d2);
-        }
-        // assign values to array2d and display its content
-        for (i = 0 ; i < d1 ; i++) {
-          for (j = 0 ; j < d2 ; j++) {
-            array2d[i][j] = 10*i + j
-            document.write("<br>array2d[" + i + "][" + j + "] = " + array2d[i][j])
+<p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
+
+<table id="myTable">
+
+</table>
+<br>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var table = document.getElementById("myTable");
+    var i;
+    var j;
+        for (i = 0 ; i < 5 ; i++) {
+          var row = table.insertRow(i);
+          for (j = 0 ; j < 10 ; j++) {
+            var element = 10*i + j + 1;
+            if (element <= 100){
+              var cell1 = row.insertCell(j);
+              cell1.innerHTML = element;
+            }
+            else{
+              var cell1 = row.insertCell(j);
+              cell1.innerHTML = " ";
+            }
+
           }
         }
-      }
-    </script>
-  </body>
+    /*for (i = 0 ; i < 10 ; i++) {
+      var cell1 = row.insertCell(i);
+      cell1.innerHTML = i;
+    }*/
+    
+
+}
+</script>
+
+</body>
 </html>
