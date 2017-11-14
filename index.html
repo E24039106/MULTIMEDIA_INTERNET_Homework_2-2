@@ -20,11 +20,16 @@ table, td {
 
 
 <script>
+var i=0;
+var j;
 function myFunction() {
     var n = document.getElementById("num").value;
     var table = document.getElementById("myTable");
-    var i;
-    var j;
+    while (i > 0){
+      table.deleteRow(0);
+      i--;
+    }
+
         for (i = 0 ; i < ((n-n%10)/10+1) ; i++) {
           var row = table.insertRow(i);
           for (j = 0 ; j < 10 ; j++) {
@@ -40,10 +45,6 @@ function myFunction() {
 
           }
         }
-    /*for (i = 0 ; i < 10 ; i++) {
-      var cell1 = row.insertCell(i);
-      cell1.innerHTML = i;
-    }*/
     
 
 }
