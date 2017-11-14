@@ -18,6 +18,20 @@
       function myFunction() {
         var x = document.getElementById("num").value;
         document.write(x);
+        // Define a 2-D array
+        var d1 = x;
+        var d2 = 10;
+        var array2d = new Array(d1);
+        for (i = 0 ; i < d2 ; i++) {
+          array2d[i] = new Array(d2);
+        }
+        // assign values to array2d and display its content
+        for (i = 0 ; i < d1 ; i++) {
+          for (j = 0 ; j < d2 ; j++) {
+            array2d[i][j] = 10*i + j
+            document.write("<br>array2d[" + i + "][" + j + "] = " + array2d[i][j])
+          }
+        }
       }
     </script>
   </body>
